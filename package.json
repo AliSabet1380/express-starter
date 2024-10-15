@@ -1,0 +1,36 @@
+{
+  "name": "express",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/bun": "latest",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "drizzle-kit": "^0.25.0"
+  },
+  "scripts": {
+    "start": "bun index.ts",
+    "dev": "bun --watch index.ts",
+    "db:generate": "bun x drizzle-kit generate",
+    "db:migrate": "bun x drizzle-kit migrate",
+    "db:studio": "bun x drizzle-kit studio"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.34.1",
+    "express": "^4.21.1",
+    "jose": "^5.9.4",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.8.0",
+    "zod": "^3.23.8",
+    "zod-express-middleware": "^1.4.0"
+  }
+}
