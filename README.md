@@ -1,4 +1,6 @@
-# express
+# express starter
+
+This file contain express starter file that set up whit bun, typescript, drizzle-orm and neon, zod and much more.
 
 To install dependencies:
 
@@ -9,7 +11,19 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.1.26. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+To generate schema:
+
+```bash
+bun run db:generate
+```
+
+To migrate schema
+
+```bash
+bun run db:migrate
+```
+
+some default schema, route, controller and validation are in project
