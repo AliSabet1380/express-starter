@@ -9,12 +9,11 @@ export const validateBody: <T>(
 ) => RequestHandler<ParamsDictionary, any, T, any, any> =
   (schema) => (req, res, next) => {
     const validateData = schema.safeParse(req.body);
-    if (!validateData.success) {
       if (!validateData.success) {
         const errorMessage = `${validateData.error.errors[0].path}: ${validateData.error.errors[0].message}`;
         return next(new AppError(errorMessage, 400));
       }
-    }
+    
 
     next();
   };
