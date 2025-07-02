@@ -1,0 +1,27 @@
+{
+  "name": "bun-ts",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "db:push": "bun x prisma db push",
+    "db:pull": "bun x prisma db pull",
+    "db:generate": "bun x prisma generate"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.3",
+    "@types/morgan": "^1.9.10"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.11.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "zod": "^3.25.67"
+  }
+}

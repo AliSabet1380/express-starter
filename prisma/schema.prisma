@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Example {
+  id                                      String @default(cuid()) @id
+
+  name                                    String
+  deleted_at                              DateTime? @db.Timestamp(0)
+
+  // ................. more ..................
+}
